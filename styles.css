@@ -1,0 +1,54 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #ececec;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: #142d4c;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.calculate {
+  cursor: pointer;
+  border: hidden;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #385170;
+  color: #ffff;
+  transition: 1s;
+}
+
+.calculate:hover {
+  background-color: #9fd3c7;
+  color: #385170;
+  transition: 1s;
+}
+
+#age {
+  margin-top: 3rem;
+}

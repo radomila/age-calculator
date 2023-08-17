@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100&family=Lato&family=Montserrat+Alternates:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="inputs">
+      <div class="section">
+        <p class="title">Date</p>
+        <input
+          class="input"
+          required
+          id="day"
+          type="number"
+          name="day"
+          placeholder="dd"
+          min="1"
+          max="31"
+        />
+      </div>
+      <div class="section">
+        <p class="title">Month</p>
+        <input
+          class="input"
+          required
+          id="month"
+          type="number"
+          name="month"
+          placeholder="mm"
+          min="1"
+          max="12"
+        />
+      </div>
+      <div class="section">
+        <p class="title">Year</p>
+        <input
+          class="input"
+          required
+          id="year"
+          type="number"
+          name="year"
+          placeholder="yyyy"
+          min="1900"
+          max="2023"
+        />
+      </div>
+    </div>
+    <div class="result">
+      <button class="calculate" onclick="getDate()">Calculate your age!</button>
+      <div id="age"></div>
+    </div>
+  </body>
+</html>
