@@ -1,7 +1,7 @@
 function getDate() {
-  const day = document.getElementById('day').value;
-  const month = document.getElementById('month').value;
-  const year = document.getElementById('year').value;
+  let day = document.getElementById('day').value;
+  let month = document.getElementById('month').value;
+  let year = document.getElementById('year').value;
 
   if (!day || !month || !year) {
     document.getElementById(
@@ -10,20 +10,31 @@ function getDate() {
     return;
   }
 
-  const birthDate = new Date(year, month - 1, day);
+  let birthDate = new Date(year, month - 1, day);
 
-  const birthDay = birthDate.getDate();
-  const birthMonth = birthDate.getMonth();
-  const birthYear = birthDate.getFullYear();
+  let birthDay = birthDate.getDate();
+  let birthMonth = birthDate.getMonth();
+  let birthYear = birthDate.getFullYear();
 
-  const today = new Date();
-  const todayDay = today.getDate();
-  const todayMonth = today.getMonth();
-  const todayYear = today.getFullYear();
+  let today = new Date();
+  let todayDay = today.getDate();
+  let todayMonth = today.getMonth();
+  let todayYear = today.getFullYear();
 
-  const dayDiff = Math.abs(todayDay - birthDay);
-  const monthDiff = Math.abs(todayMonth - birthMonth);
-  const yearDiff = Math.abs(todayYear - birthYear);
+  let m = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+  if (day > todayDay) {
+    todayDay = todayDay + m[todayMonth - 1];
+  }
+
+  if (month > todayMonth) {
+    todayMonth = todayMonth + 12;
+    todayYear = todayYear - 1;
+  }
+
+  let dayDiff = Math.abs(todayDay - birthDay);
+  let monthDiff = Math.abs(todayMonth - birthMonth);
+  let yearDiff = Math.abs(todayYear - birthYear);
 
   document.getElementById(
     'age'
